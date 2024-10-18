@@ -3,9 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const profileBottom = document.querySelector('.profile-bottom');
     const arrowImage = document.querySelector('.profile-bottom img');
     const aboutMeParagraph = document.querySelector('.about-me');
+    const container = document.querySelector('.container');
 
     // Initially hide the additional profile info
     profileBottom.style.display = 'none';
+    aboutMeParagraph.style.display = 'none'; // Ensure it's hidden initially
 
     followButton.addEventListener('click', () => {
         // Toggle the visibility of the profile bottom section
@@ -23,20 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const telegramIcon = document.querySelector('.social-media img:nth-child(2)');
     
     instagramIcon.addEventListener('click', () => {
-        window.open('https://www.instagram.com/sakthi_555_5', '_blank'); // Replace 'yourusername' with your actual username
+        window.open('https://www.instagram.com/sakthi_555_5', '_blank');
     });
 
     telegramIcon.addEventListener('click', () => {
-        window.open('https://t.me/SHAKTHIVISHWA M', '_blank'); // Replace 'yourusername' with your actual username
+        window.open('https://t.me/SHAKTHIVISHWA M', '_blank');
     });
 
     // Adding functionality for the arrow image
     arrowImage.addEventListener('click', () => {
-        // Toggle the visibility of the about me paragraph
-        if (aboutMeParagraph.style.display === 'none') {
-            aboutMeParagraph.style.display = 'block';
-        } else {
+        const isExpanded = aboutMeParagraph.style.display === 'block';
+        
+        if (isExpanded) {
             aboutMeParagraph.style.display = 'none';
+            container.style.height = 'auto'; // Reset height
+        } else {
+            aboutMeParagraph.style.display = 'block';
+            container.style.height = `${container.scrollHeight}px`; // Set height to fit content
         }
     });
 });
