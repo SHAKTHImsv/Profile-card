@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const telegramIcon = document.querySelector('.social-media img:nth-child(2)');
     
     instagramIcon.addEventListener('click', () => {
-        window.open('https://www.instagram.com/yourusername', '_blank'); // Replace 'yourusername' with your actual username
+        window.open('https://www.instagram.com/sakthi_555_5', '_blank'); // Replace 'yourusername' with your actual username
     });
 
     telegramIcon.addEventListener('click', () => {
-        window.open('https://t.me/yourusername', '_blank'); // Replace 'yourusername' with your actual username
+        window.open('https://t.me/SHAKTHIVISHWA M', '_blank'); // Replace 'yourusername' with your actual username
     });
 
     // Adding functionality for the arrow image
