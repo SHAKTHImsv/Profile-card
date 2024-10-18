@@ -1,10 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
-.container{
+
+.container {
     width: 100%;
     height: 100vh;
     background-image: url(images/background.png);
@@ -14,7 +15,8 @@
     align-items: center;
     justify-content: center;
 }
-.profile-box{
+
+.profile-box {
     background: #ff574d;
     text-align: center;
     padding: 40px 90px;
@@ -22,19 +24,22 @@
     position: relative;
     border-radius: 20px;
 }
-.menu-icon{
+
+.menu-icon {
     width: 25px;
     position: absolute;
     left: 40px;
     top: 40px;
 }
-.setting-icon{
+
+.setting-icon {
     width: 25px;
     position: absolute;
     right: 40px;
     top: 40px;
 }
-.profile-pic{
+
+.profile-pic {
     height: 150px;
     width: 150px;
     border-radius: 50%;
@@ -42,7 +47,8 @@
     padding: 6px;
     margin-top: 40px;
 }
-.profile-bottom{
+
+.profile-bottom {
     background: #fff;
     color: #999;
     padding: 60px 0;
@@ -52,17 +58,19 @@
     border-radius: 20px;
     margin-top: -10px;
 }
-.profile-bottom img{
+
+.profile-bottom img {
     width: 15px;
     margin-top: 15px;
     cursor: pointer;
 }
-.profile-box button{
+
+.profile-box button {
     background: #fff;
     color: #ff574a;
     border: none;
     outline: none;
-    box-shadow: 0 5px 10px rgba(244,67,54,0.5);
+    box-shadow: 0 5px 10px rgba(244, 67, 54, 0.5);
     padding: 15px 60px;
     cursor: pointer;
     border-radius: 30px;
@@ -70,33 +78,43 @@
     font-weight: 600;
     font-size: 16px;
 }
-.profile-box h3{
+
+.profile-box h3 {
     font-size: 22px;
     margin-top: 20px;
     font-weight: 500;
 }
-.social-media img{
+
+.social-media img {
     width: 20px;
     margin: 30px 5px;
     cursor: pointer;
 }
-.about-me{
+
+.about-me {
     padding: 20px;
     color: black;
     line-height: 30px;
+    max-width: 90%; /* Limit width to 90% of its parent */
+    margin: 0 auto; /* Center the paragraph */
+    overflow-wrap: break-word; /* Allow breaking long words */
 }
+
 @media (max-width: 768px) {
     .about-me {
         padding: 10px; /* Reduced padding for smaller screens */
         font-size: 14px; /* Adjust font size */
         line-height: 24px; /* Adjust line height */
+        max-width: 90%; /* Ensure it stays within bounds */
     }
 }
+
 @media (max-width: 480px) {
     .about-me {
         padding: 8px; /* Further reduced padding for mobile */
         font-size: 12px; /* Smaller font size */
         line-height: 20px; /* Adjusted line height */
+        max-width: 90%; /* Ensure it stays within bounds */
     }
 
     .profile-box {
@@ -117,4 +135,3 @@
         font-size: 14px; /* Smaller button font size */
     }
 }
-
