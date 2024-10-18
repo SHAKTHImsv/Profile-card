@@ -14,6 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: height 0.3s ease; /* Smooth height transition */
 }
 
 .profile-box {
@@ -51,12 +52,10 @@
 .profile-bottom {
     background: #fff;
     color: #999;
-    padding: 60px 0;
-    margin-right: -90px;
-    margin-left: -90px;
-    margin-bottom: -40px;
+    padding: 20px; /* Adjusted padding */
     border-radius: 20px;
-    margin-top: -10px;
+    display: none; /* Initially hidden */
+    transition: height 0.3s ease; /* Smooth height transition */
 }
 
 .profile-bottom img {
@@ -92,12 +91,13 @@
 }
 
 .about-me {
-    padding: 20px;
+    padding: 10px; /* Adjusted padding */
     color: black;
     line-height: 30px;
     max-width: 90%; /* Limit width to 90% of its parent */
     margin: 0 auto; /* Center the paragraph */
     overflow-wrap: break-word; /* Allow breaking long words */
+    display: none; /* Initially hidden */
 }
 
 @media (max-width: 768px) {
@@ -105,15 +105,6 @@
         padding: 10px; /* Reduced padding for smaller screens */
         font-size: 14px; /* Adjust font size */
         line-height: 24px; /* Adjust line height */
-        max-width: 90%; /* Ensure it stays within bounds */
-    }
-}
-
-@media (max-width: 480px) {
-    .about-me {
-        padding: 8px; /* Further reduced padding for mobile */
-        font-size: 12px; /* Smaller font size */
-        line-height: 20px; /* Adjusted line height */
         max-width: 90%; /* Ensure it stays within bounds */
     }
 
@@ -133,5 +124,14 @@
     .profile-box button {
         padding: 10px 30px; /* Adjust button padding */
         font-size: 14px; /* Smaller button font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-me {
+        padding: 8px; /* Further reduced padding for mobile */
+        font-size: 12px; /* Smaller font size */
+        line-height: 20px; /* Adjusted line height */
+        max-width: 90%; /* Ensure it stays within bounds */
     }
 }
